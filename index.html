@@ -12,7 +12,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 4 - :hover Feature 
 [ no ] Feature 5 - Add an Additional Interactive Drop-down
 -->
-
+"movie3">Karate Kid
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,17 +21,17 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About [CAM]</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is Cam's favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Karate Kid</option>
+          <option value="movie2">Madea</option>
+          <option value="Good Dinosuar3">Good Dinosuar</option>
+          <option value="movie4">Megan</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,15 +43,15 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        📖 Favorite Muscle to train?
         <select id="book-answer">
           <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
+          <option value="Arms2">Arms</option>
           <option value="book3">book 3</option>
           <option value="book4">book 4</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Muscle Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
@@ -66,11 +66,11 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "Good Dinosuar3") {
           $("#movie-text").text("YESSSS!");
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("Try Again LOSER!");
         }
       });
 
@@ -78,10 +78,10 @@ Select ONE Additional Feature to Add
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "Arms2") {
           $("#book-text").text("YESSSS!");
         } 
         else {
