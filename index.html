@@ -12,7 +12,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 4 - :hover Feature 
 [ no ] Feature 5 - Add an Additional Interactive Drop-down
 -->
-"movie3">Karate Kid
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,7 +30,7 @@ Select ONE Additional Feature to Add
         <select id="movie-answer">
           <option value="movie1">Karate Kid</option>
           <option value="movie2">Madea</option>
-          <option value="Good Dinosuar3">Good Dinosuar</option>
+          <option value="Good Dinosuar3">Good Dinosuar</option> 
           <option value="movie4">Megan</option>
         </select>
       </label>
@@ -38,6 +38,9 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img class="movie-pic">
+      <img class="movie-wrong">
+
     </div>
     <hr />
     <!-- Book Question -->
@@ -45,16 +48,18 @@ Select ONE Additional Feature to Add
       <label>
         📖 Favorite Muscle to train?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="Arms2">Arms</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Legs</option>
+          <option value="Arm2">Arms</option>
+          <option value="book3">Chest</option>
+          <option value="book4">Back</option>
         </select>
       </label>
       <button type="submit">Check Muscle Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img class="arms-pic">
+        <img class="muscle-wrong">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -68,26 +73,34 @@ Select ONE Additional Feature to Add
 
         if (answer === "Good Dinosuar3") {
           $("#movie-text").text("YESSSS!");
+          $(".movie-pic").attr("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpCbKOlU8wCZSun3asavzFY4mtz3NzmdUpC9Ddtwz-7E75nYF3l_IyFEzzi6I3mzNL5qretg&s=10");
         } 
         else {
           $("#movie-text").text("Try Again LOSER!");
-        }
-      });
+           $(".movie-wrong").attr("src","https://greator.com/wp-content/uploads/2021/10/shutterstock_1516329536-1024x683.jpg");
+        } 
+        }      );
 
       //=======================Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("book-answer");
+        var $answer = $("#book-answer");
         var answer = $answer.val();
+        console.log(answer)
 
-        if (answer === "Arms2") {
+        if (answer === "Arm2") {
           $("#book-text").text("YESSSS!");
-        } 
+          $(".arms-pic").attr("src","https://bardotbrush.com/wp-content/uploads/2019/07/arm-reference-photo-5-683x1024.png");
+    
+       }
+        
         else {
           $("#book-text").text("Try Again!");
+           $(".muscle-wrong").attr("src","https://media.licdn.com/dms/image/v2/C5612AQFpyp8YY0ITdg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1520174182109?e=1778716800&v=beta&t=bhW-_6ICZeMaCXhzOy5vjH9tvaKN7VI7nFYaJDaYaSg");
+        } 
         }
-      });
+      );
       
     </script>
   </body>
