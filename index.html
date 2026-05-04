@@ -61,8 +61,12 @@ Select ONE Additional Feature to Add
       <img class="arms-pic">
         <img class="muscle-wrong">
     </div>
+    <button id="button1">fuuuun</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      
+
+
       
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -101,7 +105,23 @@ Select ONE Additional Feature to Add
         } 
         }
       );
+
+
+      $("#button1").click(function () {
+        $("body").animate({
+          width: "400px",
+          marginleft:"100px",
+          borderWidth:"300px",
+         }, 1500);
+      });
       
+$("#button1").click(function () {
+  $("img").fadeToggle();
+  $("div").fadeToggle();
+});
+
+
+
     </script>
   </body>
 
